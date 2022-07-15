@@ -1,0 +1,3 @@
+# Simple TUI for DuckDuckGo written in Rust
+
+A project to learn rust with.
