@@ -1,0 +1,21 @@
+name: PRs and Issues to project Todos
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - labeled
+
+jobs:
+  add-to-project:
+    name: Add issue to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.4.0
+        with:
+          project-url: https://github.com/orgs/tvaisanen/projects/4
+          github-token: ${{ secrets.GHPROJECT_TOKEN }}
+          labeled: Todo
+          label-operator: AND
