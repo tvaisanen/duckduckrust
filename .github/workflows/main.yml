@@ -6,7 +6,7 @@ on:
       - opened
   pull_request:
     types:
-      - labeled
+      - opened
 
 jobs:
   add-to-project:
@@ -17,5 +17,3 @@ jobs:
         with:
           project-url: https://github.com/orgs/tvaisanen/projects/4
           github-token: ${{ secrets.GHPROJECT_TOKEN }}
-          labeled: Todo
-          label-operator: AND
