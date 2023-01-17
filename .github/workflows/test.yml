@@ -1,0 +1,16 @@
+name: Move new issues into Triage
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+
+jobs:
+  automate-project-columns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: test-project
+          column: Todo
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
