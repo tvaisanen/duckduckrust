@@ -13,4 +13,4 @@ jobs:
         with:
           project: test-project
           column: Todo
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GHPROJECT_TOKEN }}
